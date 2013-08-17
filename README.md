@@ -1,4 +1,4 @@
-research-json-formatter
+json-formatter
 =======================
 
 Just for learning node

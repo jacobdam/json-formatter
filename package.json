@@ -1,0 +1,25 @@
+{
+  "name": "json-formatter",
+  "version": "0.0.1",
+  "description": "Just for learning node",
+  "main": "lib/entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository" : {
+    "type": "git",
+    "url": "git@github.com:jacobdam/research-json-formatter.git"
+  },
+  "dependencies": {
+    "jison": ""
+  },
+  "devDependencies": {
+    "jake": "",
+    "less": "",
+    "uglify-js": "",
+    "handlebars": "",
+    "browserify": ""
+  },
+  "author": "Jacob Dam",
+  "license": "MIT"
+}
