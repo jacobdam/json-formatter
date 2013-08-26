@@ -18,7 +18,8 @@
     "less": "",
     "uglify-js": "",
     "handlebars": "",
-    "browserify": ""
+    "browserify": "",
+    "fsutil": ""
   },
   "author": "Jacob Dam",
   "license": "MIT"
