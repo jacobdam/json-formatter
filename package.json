@@ -4,7 +4,7 @@
   "description": "Just for learning node",
   "main": "lib/entry.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "`npm bin`/nodeunit test"
   },
   "repository" : {
     "type": "git",
@@ -19,7 +19,8 @@
     "uglify-js": "",
     "handlebars": "",
     "browserify": "",
-    "fsutil": ""
+    "fsutil": "",
+    "nodeunit": ""
   },
   "author": "Jacob Dam",
   "license": "MIT"
