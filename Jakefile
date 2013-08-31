@@ -13,8 +13,20 @@ function emptyFolder(path, excludePattern) {
   }
 }
 
-desc('Executes the application tests. Use test FILE to execute a subset of tests.');
-task('build-web', function() {
+desc('Generate parser');
+task('gen-parser', function() {
+  var jison = require('jison');
+  var parser = new jison.Parser(require('./lib/grammar.js'));
+  var parserSource = parser.generate();
+  fsutil.mkdir_p('./lib/generated');
+  fs.writeFileSync('./lib/generated/parser.js', parserSource);
+});
+
+desc('Build');
+task('build', ['gen-parser']);
+
+desc('Build web');
+task('build-web', ['build'], function() {
   // prepare build web folder
   var buildWebDir = './build/web';
   fsutil.mkdir_p(buildWebDir);
@@ -28,4 +40,10 @@ task('build-web', function() {
 
   // build html
   fsutil.cp('./web/index.html', buildWebDir + '/index.html');
-}, { async: true });
+});
+
+desc('Test');
+task('test', ['build'], function () {
+  var reporter = require('nodeunit').reporters.default;
+  reporter.run(['test']);
+});

@@ -11,9 +11,9 @@
     "url": "git@github.com:jacobdam/research-json-formatter.git"
   },
   "dependencies": {
-    "jison": ""
   },
   "devDependencies": {
+    "jison": "",
     "jake": "",
     "less": "",
     "uglify-js": "",
