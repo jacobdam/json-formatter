@@ -2,9 +2,10 @@
   "name": "json-formatter",
   "version": "0.0.1",
   "description": "Just for learning node",
-  "main": "lib/entry.js",
+  "main": "lib/main.js",
   "scripts": {
-    "test": "`npm bin`/nodeunit test"
+    "test": "`npm bin`/jake test",
+    "publish-web": "`npm bin`/jake build && cd build/web && git add -A . && git commit -m 'Update github pages' && git push origin gh-pages"
   },
   "repository" : {
     "type": "git",
@@ -15,9 +16,7 @@
   "devDependencies": {
     "jison": "",
     "jake": "",
-    "less": "",
     "uglify-js": "",
-    "handlebars": "",
     "browserify": "",
     "fsutil": "",
     "nodeunit": ""

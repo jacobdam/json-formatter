@@ -1,4 +1,4 @@
-var jsonFormatter = require('../lib/entry.js');
+var jsonFormatter = require('../lib/main.js');
 $(function() {
   $('#json_output').on('focus', function() {
     $(this).select();

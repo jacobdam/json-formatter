@@ -1,4 +1,4 @@
-var jsonFormatter = require('../lib/entry.js');
+var jsonFormatter = require('../lib/main.js');
 
 module.exports = {
   testFormatJSON: function(test){
