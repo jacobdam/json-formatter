@@ -1,12 +1,18 @@
 var jsonFormatter = require('../lib/main.js');
+
 $(function() {
-  $('#json_output').on('focus', function() {
-    $(this).select();
-  });
   $('#format_button').on('click', function() {
     var jsonSource = $('#json_input').val();
-    var formattedJSON = jsonFormatter.formatJSON(jsonSource);
-    $('#json_output').val(formattedJSON);
+
+    try {
+      var formattedJSON = jsonFormatter.formatJSON(jsonSource);
+      $('#json_output').val(formattedJSON);
+      $('#json_output_error').text('');
+    } catch (e) {
+      console.log(e)
+      $('#json_output').val('');
+      $('#json_output_error').text(e.toString());
+    }
   });
   $('#load_sample_json').on('click', function() {
     var url = $(this).attr('href');
