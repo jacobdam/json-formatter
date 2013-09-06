@@ -1036,6 +1036,7 @@ process.chdir = function (dir) {
 
 },{}],7:[function(require,module,exports){
 var jsonFormatter = require('../lib/main.js');
+
 $(function() {
   $('#format_button').on('click', function() {
     var jsonSource = $('#json_input').val();
@@ -1043,10 +1044,11 @@ $(function() {
     try {
       var formattedJSON = jsonFormatter.formatJSON(jsonSource);
       $('#json_output').val(formattedJSON);
-      $('#json_output_error').val('');
+      $('#json_output_error').text('');
     } catch (e) {
+      console.log(e)
       $('#json_output').val('');
-      $('#json_output_error').val(e);
+      $('#json_output_error').text(e.toString());
     }
   });
   $('#load_sample_json').on('click', function() {
