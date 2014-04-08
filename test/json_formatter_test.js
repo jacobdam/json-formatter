@@ -2,14 +2,15 @@ var jsonFormatter = require('../lib/main.js');
 
 module.exports = {
   testFormatJSON: function(test){
-    var input = '{"a":[1,2,null,{}],"b":true}';
+    var input = '{"a":[1,2,null,{},"x ("],"b":true}';
     var expectedOutput = [
       '{', '\n',
       '    ', '"a"', ':', ' ', '[', '\n',
       '    ', '    ', '1', ',', '\n',
       '    ', '    ', '2', ',', '\n',
       '    ', '    ', 'null', ',', '\n',
-      '    ', '    ', '{', ' ', '}', '\n',
+      '    ', '    ', '{', ' ', '}', ',', '\n',
+      '    ', '    ', '"x ("', '\n',
       '    ', ']', ',', '\n',
       '    ', '"b"', ':', ' ', 'true', '\n',
       '}'
