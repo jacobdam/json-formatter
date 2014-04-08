@@ -1,7 +1,7 @@
 {
   "name": "json-formatter",
   "version": "0.0.1",
-  "description": "Just for learning node",
+  "description": "JSON formatter",
   "main": "lib/main.js",
   "scripts": {
     "test": "`npm bin`/jake test",
@@ -9,7 +9,7 @@
   },
   "repository" : {
     "type": "git",
-    "url": "git@github.com:jacobdam/research-json-formatter.git"
+    "url": "git@github.com:jacobdam/json-formatter.git"
   },
   "dependencies": {
   },
