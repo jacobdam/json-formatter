@@ -3,6 +3,8 @@
 http://jacobdam.github.io/json-formatter makes JSON easier to read.
 
 [![Build Status](https://travis-ci.org/jacobdam/json-formatter.svg?branch=master)](https://travis-ci.org/jacobdam/json-formatter)
+[![Dependency Status](https://gemnasium.com/jacobdam/json-formatter.svg)](https://gemnasium.com/jacobdam/json-formatter)
+
 
 ## Development
 
