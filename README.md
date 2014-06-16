@@ -1,8 +1,8 @@
-= json-formatter
+# json-formatter
 
 http://jacobdam.github.io/json-formatter makes JSON easier to read.
 
-== Development
+## Development
 
 Install
 
