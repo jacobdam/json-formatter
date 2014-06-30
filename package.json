@@ -5,7 +5,7 @@
   "main": "lib/main.js",
   "scripts": {
     "test": "`npm bin`/jake test",
-    "publish-web": "`npm bin`/jake build && cd build/web && git add -A . && git commit -m 'Update github pages' && git push origin gh-pages"
+    "publish-web": "`npm bin`/jake build-web && cd build/web && git add -A . && git commit -m 'Update github pages' && git push origin gh-pages"
   },
   "repository" : {
     "type": "git",
