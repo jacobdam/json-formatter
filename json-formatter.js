@@ -1123,13 +1123,20 @@ $(function() {
   });
   $('#load_sample_json').on('click', function() {
     var url = $(this).attr('href');
+    $('#load_sample_json_message').text('Loading...');
+    $('#load_sample_json_message').removeClass('error-message')
     $.ajax({ url: url, dataType: 'text' })
-    .done(function(data) {
-      $('#json_input').val(data);
-    });
+      .done(function(data) {
+        $('#load_sample_json_message').text('');
+        $('#json_input').val(data);
+      })
+      .fail(function() {
+        $('#load_sample_json_message').text('Loading Failed');
+        $('#load_sample_json_message').addClass('error-message')
+      });
     return false;
   });
 
 });
-  
+
 },{"../lib/main.js":2}]},{},[7])

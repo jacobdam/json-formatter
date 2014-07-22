@@ -4,10 +4,11 @@
     <title>JSON Formatter</title>
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="json-formatter.js"></script>
+    <link rel="stylesheet" type="text/css" href="json-formatter.css">
   </head>
   <body>
     <label for="json_input">JSON - <a id="load_sample_json" href="https://api.dailymotion.com/videos">Sample JSON</a>
-    </label><br/>
+    </label><span id="load_sample_json_message"></span><br/>
     <textarea id="json_input" rows="10" cols="80"></textarea><br/>
 
     <br/>
