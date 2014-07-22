@@ -40,6 +40,7 @@ task('build-web', ['build'], function() {
 
   // build html
   fsutil.cp('./web/index.html', buildWebDir + '/index.html');
+  fsutil.cp('./web/json-formatter.css', buildWebDir + '/json-formatter.css');
 });
 
 desc('Test');
